@@ -1,0 +1,5 @@
+F:/SSS/C++/Reckoner/build/CMakeFiles/mainwindow.dir
+F:/SSS/C++/Reckoner/build/CMakeFiles/edit_cache.dir
+F:/SSS/C++/Reckoner/build/CMakeFiles/rebuild_cache.dir
+F:/SSS/C++/Reckoner/build/CMakeFiles/mainwindow_autogen_timestamp_deps.dir
+F:/SSS/C++/Reckoner/build/CMakeFiles/mainwindow_autogen.dir

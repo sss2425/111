@@ -1,0 +1,3 @@
+F:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\mainwindow.dir/objects.a
+F:\Qt\Tools\mingw810_64\bin\ar.exe qc CMakeFiles\mainwindow.dir/objects.a @CMakeFiles\mainwindow.dir\objects1.rsp
+F:\Qt\Tools\mingw810_64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\mainwindow.dir/objects.a -Wl,--no-whole-archive -o mainwindow.exe -Wl,--out-implib,libmainwindow.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\mainwindow.dir\linkLibs.rsp
