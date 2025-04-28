@@ -13,7 +13,7 @@ class Value{
     void operator -=(Value&a);
     int operator <(Value&a);
     int operator >(Value&a);
-    int operator ==(Value&a);
+    int operator ==(const Value&a)const;
     int operator <=(Value&a);
     int operator >=(Value&a);
     Value operator *(Value&a);

@@ -39,15 +39,21 @@ QObject::connect(p->BtnChu,&QPushButton::clicked,&w,[=](){
 if(++i<2){fh=4;QString str=p->lineEdit->text();p->lineEdit->insert("÷");k=str.size();t::f1(::a,str);}j=0;
 });
 QObject::connect(p->BtnOutput,&QPushButton::clicked,&w,[=](){
-QString str=p->lineEdit->text();str=str.mid(::k+1);t::f1(::b,str);
+QString str=p->lineEdit->text();str=str.mid(::k+1);t::f1(::b,str);int cnt=1;
 switch(fh){
     case(1): ::c=::a+::b;break;
     case(2): ::c=::a-::b;break;
     case(3): ::c=::a*::b;break;
-    case(4): ::c=::a/::b;break;
+    case(4): {
+    try{
+        ::c=::a/::b;
+    }catch(int){
+        cnt=0;
+    }
 }
-str=QString::fromStdString(Value::toString(c));
-p->BtnCE->clicked();p->lineEdit->setText(str);
+}if(cnt){
+str=QString::fromStdString(Value::toString(c));p->BtnCE->clicked();
+p->lineEdit->setText(str);}else {p->BtnCE->clicked();p->lineEdit->setText("除数不能为0");}
 });
 QObject::connect(p->BtnD,&QPushButton::clicked,&w,[=](){
 if(++j<2)p->lineEdit->insert(".");

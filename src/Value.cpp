@@ -105,8 +105,8 @@ int Value::operator>(Value&a){
 int Value::operator<(Value&a){
     return(*this>a)?false:true;
 }
-int Value::operator==(Value&a){
-    align(*this,a);
+int Value::operator==(const Value&a)const{
+    Value t1(*this),t2(a);align(t1,t2);
     return (this->y==a.y)?(this->z==a.z)?(this->x==a.x)?true:false:false:false;
 }
 int Value::operator<=(Value&a){
@@ -132,6 +132,7 @@ void func(Value &a,Value &b,Value&ret){
 }
 }
 Value Value::operator/(Value &a){
+if(a==Value())throw(0);
 Value t1=*this,t2=a;t1.y=t2.y=0;Value ret;func(t1,t2,ret);
 ret.overflow();if(a.y)ret.y=!y;else ret.y=y;return ret;
 }
