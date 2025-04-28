@@ -107,7 +107,7 @@ int Value::operator<(Value&a){
 }
 int Value::operator==(const Value&a)const{
     Value t1(*this),t2(a);align(t1,t2);
-    return (this->y==a.y)?(this->z==a.z)?(this->x==a.x)?true:false:false:false;
+    return (t1.y==t2.y)?(t1.z==t2.z)?(t1.x==t2.x)?true:false:false:false;
 }
 int Value::operator<=(Value&a){
     return(*this<a||*this==a)?true:false;
